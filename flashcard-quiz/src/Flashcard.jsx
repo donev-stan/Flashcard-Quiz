@@ -1,22 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 
-export default function Flashcard() {
+export default function Flashcard({ flashcard }) {
+    const [flip, setFlip] = useState(false);
+
     return (
         <div className="col">
-
-            <div className="card" style={{ width: "18rem" }}>
-                <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <h6 className="card-subtitle mb-2 text-muted">
-                        Card subtitle
-                    </h6>
-                    <p className="card-text">
-                        Some quick example text to build on the card title and
-                        make up the bulk of the card's content.
-                    </p>
+            <div
+                className={`card ${flip ? "flip" : ""}`}
+                onClick={() => setFlip(!flip)}
+            >
+                <div className="front">
+                    {flashcard.question}
+                    <div className="flashcard-options">
+                        {flashcard.options.map((option) => {
+                            return (
+                                <div className="flashcard-option">{option}</div>
+                            );
+                        })}
+                    </div>
                 </div>
+
+                <div className="back">{flashcard.answer}</div>
             </div>
-            
         </div>
     );
 }
