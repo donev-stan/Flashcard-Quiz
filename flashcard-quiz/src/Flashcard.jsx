@@ -32,7 +32,7 @@ export default function Flashcard({ flashcard }) {
                     <div className="flashcard-options">
                         {flashcard.options.map((option) => {
                             return (
-                                <div className="flashcard-option">{option}</div>
+                                <div className="flashcard-option" key={option}>{option}</div>
                             );
                         })}
                     </div>
