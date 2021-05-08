@@ -1,5 +1,6 @@
 body {
-    background-color: #C8D0D2;
+    /* background-color: #C8D0D2; */
+    background-color: #87cadb;
 }
 
 .card {
@@ -37,6 +38,7 @@ body {
 
 .card .front {
     left: 0;
+    font-size: larger;
 }
 
 .card .back {

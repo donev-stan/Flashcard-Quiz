@@ -21,7 +21,7 @@ export default function Flashcard({ flashcard }) {
     }, []);
 
     return (
-        <div className="col-lg-3 my-4">
+        <div className="col-lg-4 col-md-6 my-4">
             <div
                 className={`card ${flip ? "flip" : ""}`}
                 onClick={() => setFlip(!flip)}
