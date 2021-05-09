@@ -7,8 +7,6 @@ function App() {
     const [flashcards, setFlashcards] = useState([]);
     const [categories, setCategories] = useState([]);
 
-    useEffect(() => {}, []);
-
     function decodeString(string) {
         const textArea = document.createElement("textarea");
         textArea.innerHTML = string;
@@ -70,7 +68,10 @@ function App() {
                         style={{ width: "100%" }}
                         onSubmit={handleSubmit}
                     >
-                        <div className="col-12" style={{fontFamily: 'fantasy'}}>
+                        <div
+                            className="col-12"
+                            style={{ fontFamily: "fantasy" }}
+                        >
                             <h1>Flashcard Trivia</h1>
                         </div>
 
